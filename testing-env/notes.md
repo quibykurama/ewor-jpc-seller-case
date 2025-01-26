@@ -1,9 +1,6 @@
 EWOR WEBSITE PAGES
 
 home = "https://www.ewor.com/"
-
-
-
 fellow_login = "https://platform.ewor.com/auth/login/"
 application_form = "https://www.ewor.com/apply?sc=EW&ssc=Header&sm=Direct"
 legal_imprint = "https://www.ewor.com/legal/imprint"
