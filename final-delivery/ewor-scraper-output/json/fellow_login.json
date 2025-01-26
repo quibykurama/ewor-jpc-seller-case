@@ -1,0 +1,50 @@
+{
+  "title": "Login – Education",
+  "meta_description": null,
+  "form_fields": [
+    {
+      "name": "E-mail",
+      "type": "text",
+      "placeholder": "Enter your e-mail address"
+    },
+    {
+      "name": "Password",
+      "type": "password",
+      "placeholder": "Enter your password"
+    }
+  ],
+  "footer_links": [
+    {
+      "text": "Schedule",
+      "link": "https://platform.ewor.com/my-schedule/"
+    },
+    {
+      "text": "Mentors",
+      "link": "https://platform.ewor.com/mentors-experts/"
+    },
+    {
+      "text": "Community",
+      "link": "https://platform.ewor.com/community/"
+    },
+    {
+      "text": "Resources",
+      "link": "https://platform.ewor.com/resources-services/"
+    },
+    {
+      "text": "Refer Talent Now",
+      "link": "https://nominate.ewor.com/?type=vp&"
+    },
+    {
+      "text": "Privacy Policy",
+      "link": "https://ewor.com/privacy-policy/"
+    },
+    {
+      "text": "",
+      "link": "https://www.linkedin.com/company/ewor/mycompany/"
+    },
+    {
+      "text": "",
+      "link": "https://www.instagram.com/ewor_official/?hl=en"
+    }
+  ]
+}
