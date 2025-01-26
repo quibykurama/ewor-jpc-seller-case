@@ -1,0 +1,1368 @@
+<html dir="ltr" mozdisallowselectionprint="" lang="en-US" style="--viewer-container-height: 877px;"
+    data-toolbar-density="normal">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Traction Fellowship Factsheet (A4) - Aug 12 - EWOR Traction Fellowship Factsheet.pdf</title>
+
+    <!-- This snippet is used in the Firefox extension (included from viewer.html) -->
+    <script src="resource://pdf.js/build/pdf.mjs" type="module"></script>
+
+    <link rel="stylesheet" href="resource://pdf.js/web/viewer.css">
+    <link rel="localization" href="toolkit/pdfviewer/viewer.ftl">
+
+    <script src="resource://pdf.js/web/viewer.mjs" type="module"></script>
+</head>
+
+<body tabindex="0">
+    <div id="outerContainer">
+
+        <div id="sidebarContainer">
+            <div id="toolbarSidebar" class="toolbarHorizontalGroup">
+                <div id="toolbarSidebarLeft">
+                    <div id="sidebarViewButtons" class="toolbarHorizontalGroup toggled" role="radiogroup">
+                        <button id="viewThumbnail" class="toolbarButton toggled" type="button" title="Show Thumbnails"
+                            tabindex="0" data-l10n-id="pdfjs-thumbs-button" role="radio" aria-checked="true"
+                            aria-controls="thumbnailView">
+                            <span data-l10n-id="pdfjs-thumbs-button-label">Thumbnails</span>
+                        </button>
+                        <button id="viewOutline" class="toolbarButton" type="button"
+                            title="Show Document Outline (double-click to expand/collapse all items)" tabindex="0"
+                            data-l10n-id="pdfjs-document-outline-button" role="radio" aria-checked="false"
+                            aria-controls="outlineView" disabled="">
+                            <span data-l10n-id="pdfjs-document-outline-button-label">Document Outline</span>
+                        </button>
+                        <button id="viewAttachments" class="toolbarButton" type="button" title="Show Attachments"
+                            tabindex="0" data-l10n-id="pdfjs-attachments-button" role="radio" aria-checked="false"
+                            aria-controls="attachmentsView" disabled="">
+                            <span data-l10n-id="pdfjs-attachments-button-label">Attachments</span>
+                        </button>
+                        <button id="viewLayers" class="toolbarButton" type="button"
+                            title="Show Layers (double-click to reset all layers to the default state)" tabindex="0"
+                            data-l10n-id="pdfjs-layers-button" role="radio" aria-checked="false"
+                            aria-controls="layersView" disabled="">
+                            <span data-l10n-id="pdfjs-layers-button-label">Layers</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="toolbarSidebarRight">
+                    <div id="outlineOptionsContainer" class="toolbarHorizontalGroup">
+                        <div class="verticalToolbarSeparator"></div>
+
+                        <button id="currentOutlineItem" class="toolbarButton" type="button" disabled=""
+                            title="Find Current Outline Item" tabindex="0"
+                            data-l10n-id="pdfjs-current-outline-item-button">
+                            <span data-l10n-id="pdfjs-current-outline-item-button-label">Current Outline Item</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebarContent">
+                <div id="thumbnailView"><a href="#page=1" data-l10n-id="pdfjs-thumb-page-title"
+                        data-l10n-args="{&quot;page&quot;:1}" title="Page 1">
+                        <div class="thumbnail selected" data-page-number="1"
+                            style="--thumbnail-width: 98px; --thumbnail-height: 138px;">
+                            <div class="thumbnailImage"></div>
+                        </div>
+                    </a></div>
+                <div id="outlineView" class="hidden"></div>
+                <div id="attachmentsView" class="hidden"></div>
+                <div id="layersView" class="hidden"></div>
+            </div>
+            <div id="sidebarResizer"></div>
+        </div> <!-- sidebarContainer -->
+
+        <div id="mainContainer">
+            <div class="toolbar">
+                <div id="toolbarContainer">
+                    <div id="toolbarViewer" class="toolbarHorizontalGroup">
+                        <div id="toolbarViewerLeft" class="toolbarHorizontalGroup">
+                            <button id="sidebarToggleButton" class="toolbarButton" type="button" title="Toggle Sidebar"
+                                tabindex="0" data-l10n-id="pdfjs-toggle-sidebar-button" aria-expanded="false"
+                                aria-haspopup="true" aria-controls="sidebarContainer">
+                                <span data-l10n-id="pdfjs-toggle-sidebar-button-label">Toggle Sidebar</span>
+                            </button>
+                            <div class="toolbarButtonSpacer"></div>
+                            <div class="toolbarButtonWithContainer">
+                                <button id="viewFindButton" class="toolbarButton hidden" type="button"
+                                    title="Find in Document" tabindex="0" data-l10n-id="pdfjs-findbar-button"
+                                    aria-expanded="false" aria-controls="findbar">
+                                    <span data-l10n-id="pdfjs-findbar-button-label">Find</span>
+                                </button>
+                                <div class="hidden doorHanger toolbarHorizontalGroup" id="findbar">
+                                    <div id="findInputContainer" class="toolbarHorizontalGroup">
+                                        <span class="loadingInput end toolbarHorizontalGroup">
+                                            <input id="findInput" class="toolbarField" title="Find"
+                                                placeholder="Find in document…" tabindex="0"
+                                                data-l10n-id="pdfjs-find-input" aria-invalid="false">
+                                        </span>
+                                        <div class="toolbarHorizontalGroup">
+                                            <button id="findPreviousButton" class="toolbarButton" type="button"
+                                                title="Find the previous occurrence of the phrase" tabindex="0"
+                                                data-l10n-id="pdfjs-find-previous-button">
+                                                <span data-l10n-id="pdfjs-find-previous-button-label">Previous</span>
+                                            </button>
+                                            <div class="splitToolbarButtonSeparator"></div>
+                                            <button id="findNextButton" class="toolbarButton" type="button"
+                                                title="Find the next occurrence of the phrase" tabindex="0"
+                                                data-l10n-id="pdfjs-find-next-button">
+                                                <span data-l10n-id="pdfjs-find-next-button-label">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div id="findbarOptionsOneContainer" class="toolbarHorizontalGroup">
+                                        <div class="toggleButton toolbarLabel">
+                                            <input type="checkbox" id="findHighlightAll" tabindex="0">
+                                            <label for="findHighlightAll"
+                                                data-l10n-id="pdfjs-find-highlight-checkbox">Highlight All</label>
+                                        </div>
+                                        <div class="toggleButton toolbarLabel">
+                                            <input type="checkbox" id="findMatchCase" tabindex="0">
+                                            <label for="findMatchCase"
+                                                data-l10n-id="pdfjs-find-match-case-checkbox-label">Match Case</label>
+                                        </div>
+                                    </div>
+                                    <div id="findbarOptionsTwoContainer" class="toolbarHorizontalGroup">
+                                        <div class="toggleButton toolbarLabel">
+                                            <input type="checkbox" id="findMatchDiacritics" tabindex="0">
+                                            <label for="findMatchDiacritics"
+                                                data-l10n-id="pdfjs-find-match-diacritics-checkbox-label">Match
+                                                Diacritics</label>
+                                        </div>
+                                        <div class="toggleButton toolbarLabel">
+                                            <input type="checkbox" id="findEntireWord" tabindex="0">
+                                            <label for="findEntireWord"
+                                                data-l10n-id="pdfjs-find-entire-word-checkbox-label">Whole Words</label>
+                                        </div>
+                                    </div>
+
+                                    <div id="findbarMessageContainer" class="toolbarHorizontalGroup" aria-live="polite">
+                                        <span id="findResultsCount" class="toolbarLabel"></span>
+                                        <span id="findMsg" class="toolbarLabel"></span>
+                                    </div>
+                                </div> <!-- findbar -->
+                            </div>
+                            <div class="toolbarHorizontalGroup hiddenSmallView">
+                                <button class="toolbarButton" title="Previous Page" type="button" id="previous"
+                                    tabindex="0" data-l10n-id="pdfjs-previous-button" disabled="">
+                                    <span data-l10n-id="pdfjs-previous-button-label">Previous</span>
+                                </button>
+                                <div class="splitToolbarButtonSeparator"></div>
+                                <button class="toolbarButton" type="button" title="Next Page" id="next" tabindex="0"
+                                    data-l10n-id="pdfjs-next-button" disabled="">
+                                    <span data-l10n-id="pdfjs-next-button-label">Next</span>
+                                </button>
+                            </div>
+                            <div class="toolbarHorizontalGroup">
+                                <span class="loadingInput start toolbarHorizontalGroup">
+                                    <input type="number" id="pageNumber" class="toolbarField" title="Page" value="1"
+                                        min="1" tabindex="0" data-l10n-id="pdfjs-page-input" autocomplete="off" max="1">
+                                </span>
+                                <span id="numPages" class="toolbarLabel" data-l10n-id="pdfjs-of-pages"
+                                    data-l10n-args="{&quot;pagesCount&quot;:1}">of 1</span>
+                            </div>
+                        </div>
+                        <div id="toolbarViewerMiddle" class="toolbarHorizontalGroup">
+                            <div class="toolbarHorizontalGroup">
+                                <button id="zoomOutButton" class="toolbarButton" type="button" title="Zoom Out"
+                                    tabindex="0" data-l10n-id="pdfjs-zoom-out-button">
+                                    <span data-l10n-id="pdfjs-zoom-out-button-label">Zoom Out</span>
+                                </button>
+                                <div class="splitToolbarButtonSeparator"></div>
+                                <button id="zoomInButton" class="toolbarButton" type="button" title="Zoom In"
+                                    tabindex="0" data-l10n-id="pdfjs-zoom-in-button">
+                                    <span data-l10n-id="pdfjs-zoom-in-button-label">Zoom In</span>
+                                </button>
+                            </div>
+                            <span id="scaleSelectContainer" class="dropdownToolbarButton">
+                                <select id="scaleSelect" title="Zoom" tabindex="0" data-l10n-id="pdfjs-zoom-select">
+                                    <option id="pageAutoOption" value="auto" selected="selected"
+                                        data-l10n-id="pdfjs-page-scale-auto">Automatic Zoom</option>
+                                    <option id="pageActualOption" value="page-actual"
+                                        data-l10n-id="pdfjs-page-scale-actual">Actual Size</option>
+                                    <option id="pageFitOption" value="page-fit" data-l10n-id="pdfjs-page-scale-fit">Page
+                                        Fit</option>
+                                    <option id="pageWidthOption" value="page-width"
+                                        data-l10n-id="pdfjs-page-scale-width">Page Width</option>
+                                    <option id="customScaleOption" value="custom" disabled="disabled" hidden="true"
+                                        data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 0 }">0%</option>
+                                    <option value="0.5" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 50 }">50%</option>
+                                    <option value="0.75" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 75 }">75%</option>
+                                    <option value="1" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 100 }">100%</option>
+                                    <option value="1.25" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 125 }">125%</option>
+                                    <option value="1.5" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 150 }">150%</option>
+                                    <option value="2" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 200 }">200%</option>
+                                    <option value="3" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 300 }">300%</option>
+                                    <option value="4" data-l10n-id="pdfjs-page-scale-percent"
+                                        data-l10n-args="{ &quot;scale&quot;: 400 }">400%</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div id="toolbarViewerRight" class="toolbarHorizontalGroup">
+                            <div id="editorModeButtons" class="toolbarHorizontalGroup" role="radiogroup">
+                                <div id="editorHighlight" class="toolbarButtonWithContainer">
+                                    <button id="editorHighlightButton" class="toolbarButton" type="button"
+                                        title="Highlight" role="radio" aria-expanded="false" aria-haspopup="true"
+                                        aria-controls="editorHighlightParamsToolbar" tabindex="0"
+                                        data-l10n-id="pdfjs-editor-highlight-button">
+                                        <span data-l10n-id="pdfjs-editor-highlight-button-label">Highlight</span>
+                                    </button>
+                                    <div class="editorParamsToolbar hidden doorHangerRight"
+                                        id="editorHighlightParamsToolbar">
+                                        <div id="highlightParamsToolbarContainer" class="editorParamsToolbarContainer">
+                                            <div id="editorHighlightColorPicker" class="colorPicker">
+                                                <span id="highlightColorPickerLabel" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-highlight-colorpicker-label">Highlight
+                                                    color</span>
+                                                <div class="dropdown" role="listbox" aria-multiselectable="false"
+                                                    aria-orientation="horizontal"
+                                                    data-l10n-id="pdfjs-editor-colorpicker-dropdown"
+                                                    aria-labelledby="highlightColorPickerLabel"
+                                                    aria-label="Color choices"><button tabindex="0" role="option"
+                                                        data-color="#FFFF98" title="Yellow"
+                                                        data-l10n-id="pdfjs-editor-colorpicker-yellow"
+                                                        aria-selected="true"><span class="swatch"
+                                                            style="background-color: rgb(255, 255, 152);"></span></button><button
+                                                        tabindex="0" role="option" data-color="#53FFBC" title="Green"
+                                                        data-l10n-id="pdfjs-editor-colorpicker-green"
+                                                        aria-selected="false"><span class="swatch"
+                                                            style="background-color: rgb(83, 255, 188);"></span></button><button
+                                                        tabindex="0" role="option" data-color="#80EBFF" title="Blue"
+                                                        data-l10n-id="pdfjs-editor-colorpicker-blue"
+                                                        aria-selected="false"><span class="swatch"
+                                                            style="background-color: rgb(128, 235, 255);"></span></button><button
+                                                        tabindex="0" role="option" data-color="#FFCBE6" title="Pink"
+                                                        data-l10n-id="pdfjs-editor-colorpicker-pink"
+                                                        aria-selected="false"><span class="swatch"
+                                                            style="background-color: rgb(255, 203, 230);"></span></button><button
+                                                        tabindex="0" role="option" data-color="#FF4F5F" title="Red"
+                                                        data-l10n-id="pdfjs-editor-colorpicker-red"
+                                                        aria-selected="false"><span class="swatch"
+                                                            style="background-color: rgb(255, 79, 95);"></span></button>
+                                                </div>
+                                            </div>
+                                            <div id="editorHighlightThickness">
+                                                <label for="editorFreeHighlightThickness" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-free-highlight-thickness-input">Thickness</label>
+                                                <div class="thicknessPicker">
+                                                    <input type="range" id="editorFreeHighlightThickness"
+                                                        class="editorParamsSlider"
+                                                        data-l10n-id="pdfjs-editor-free-highlight-thickness-title"
+                                                        value="12" min="8" max="24" step="1" tabindex="0"
+                                                        title="Change thickness when highlighting items other than text">
+                                                </div>
+                                            </div>
+                                            <div id="editorHighlightVisibility">
+                                                <div class="divider"></div>
+                                                <div class="toggler">
+                                                    <label for="editorHighlightShowAll" class="editorParamsLabel"
+                                                        data-l10n-id="pdfjs-editor-highlight-show-all-button-label">Show
+                                                        all</label>
+                                                    <button id="editorHighlightShowAll" class="toggle-button"
+                                                        type="button"
+                                                        data-l10n-id="pdfjs-editor-highlight-show-all-button"
+                                                        aria-pressed="true" tabindex="0" title="Show all"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="editorFreeText" class="toolbarButtonWithContainer">
+                                    <button id="editorFreeTextButton" class="toolbarButton" type="button" title="Text"
+                                        role="radio" aria-expanded="false" aria-haspopup="true"
+                                        aria-controls="editorFreeTextParamsToolbar" tabindex="0"
+                                        data-l10n-id="pdfjs-editor-free-text-button">
+                                        <span data-l10n-id="pdfjs-editor-free-text-button-label">Text</span>
+                                    </button>
+                                    <div class="editorParamsToolbar hidden doorHangerRight"
+                                        id="editorFreeTextParamsToolbar">
+                                        <div class="editorParamsToolbarContainer">
+                                            <div class="editorParamsSetter">
+                                                <label for="editorFreeTextColor" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-free-text-color-input">Color</label>
+                                                <input type="color" id="editorFreeTextColor" class="editorParamsColor"
+                                                    tabindex="0">
+                                            </div>
+                                            <div class="editorParamsSetter">
+                                                <label for="editorFreeTextFontSize" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-free-text-size-input">Size</label>
+                                                <input type="range" id="editorFreeTextFontSize"
+                                                    class="editorParamsSlider" value="10" min="5" max="100" step="1"
+                                                    tabindex="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="editorInk" class="toolbarButtonWithContainer">
+                                    <button id="editorInkButton" class="toolbarButton" type="button" title="Draw"
+                                        role="radio" aria-expanded="false" aria-haspopup="true"
+                                        aria-controls="editorInkParamsToolbar" tabindex="0"
+                                        data-l10n-id="pdfjs-editor-ink-button">
+                                        <span data-l10n-id="pdfjs-editor-ink-button-label">Draw</span>
+                                    </button>
+                                    <div class="editorParamsToolbar hidden doorHangerRight" id="editorInkParamsToolbar">
+                                        <div class="editorParamsToolbarContainer">
+                                            <div class="editorParamsSetter">
+                                                <label for="editorInkColor" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-ink-color-input">Color</label>
+                                                <input type="color" id="editorInkColor" class="editorParamsColor"
+                                                    tabindex="0">
+                                            </div>
+                                            <div class="editorParamsSetter">
+                                                <label for="editorInkThickness" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-ink-thickness-input">Thickness</label>
+                                                <input type="range" id="editorInkThickness" class="editorParamsSlider"
+                                                    value="1" min="1" max="20" step="1" tabindex="0">
+                                            </div>
+                                            <div class="editorParamsSetter">
+                                                <label for="editorInkOpacity" class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-ink-opacity-input">Opacity</label>
+                                                <input type="range" id="editorInkOpacity" class="editorParamsSlider"
+                                                    value="100" min="1" max="100" step="1" tabindex="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="editorStamp" class="toolbarButtonWithContainer">
+                                    <button id="editorStampButton" class="toolbarButton" type="button"
+                                        title="Add or edit images" role="radio" aria-expanded="false"
+                                        aria-haspopup="true" aria-controls="editorStampParamsToolbar" tabindex="0"
+                                        data-l10n-id="pdfjs-editor-stamp-button">
+                                        <span data-l10n-id="pdfjs-editor-stamp-button-label">Add or edit images</span>
+                                    </button>
+                                    <div class="editorParamsToolbar hidden doorHangerRight menu"
+                                        id="editorStampParamsToolbar">
+                                        <div class="menuContainer">
+                                            <button id="editorStampAddImage" class="toolbarButton labeled" type="button"
+                                                title="Add image" tabindex="0"
+                                                data-l10n-id="pdfjs-editor-stamp-add-image-button">
+                                                <span class="editorParamsLabel"
+                                                    data-l10n-id="pdfjs-editor-stamp-add-image-button-label">Add
+                                                    image</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="editorModeSeparator" class="verticalToolbarSeparator"></div>
+
+                            <div class="toolbarHorizontalGroup hiddenMediumView">
+                                <button id="printButton" class="toolbarButton" type="button" title="Print" tabindex="0"
+                                    data-l10n-id="pdfjs-print-button">
+                                    <span data-l10n-id="pdfjs-print-button-label">Print</span>
+                                </button>
+
+                                <button id="downloadButton" class="toolbarButton" type="button" title="Save"
+                                    tabindex="0" data-l10n-id="pdfjs-save-button">
+                                    <span data-l10n-id="pdfjs-save-button-label">Save</span>
+                                </button>
+                            </div>
+
+                            <div class="verticalToolbarSeparator hiddenMediumView"></div>
+
+                            <div id="secondaryToolbarToggle" class="toolbarButtonWithContainer">
+                                <button id="secondaryToolbarToggleButton" class="toolbarButton" type="button"
+                                    title="Tools" tabindex="0" data-l10n-id="pdfjs-tools-button" aria-expanded="false"
+                                    aria-haspopup="true" aria-controls="secondaryToolbar">
+                                    <span data-l10n-id="pdfjs-tools-button-label">Tools</span>
+                                </button>
+                                <div id="secondaryToolbar" class="hidden doorHangerRight menu">
+                                    <div id="secondaryToolbarButtonContainer" class="menuContainer">
+
+                                        <div class="visibleMediumView">
+                                            <button id="secondaryPrint" class="toolbarButton labeled" type="button"
+                                                title="Print" tabindex="0" data-l10n-id="pdfjs-print-button">
+                                                <span data-l10n-id="pdfjs-print-button-label">Print</span>
+                                            </button>
+
+                                            <button id="secondaryDownload" class="toolbarButton labeled" type="button"
+                                                title="Save" tabindex="0" data-l10n-id="pdfjs-save-button">
+                                                <span data-l10n-id="pdfjs-save-button-label">Save</span>
+                                            </button>
+
+                                            <div class="horizontalToolbarSeparator"></div>
+                                        </div>
+
+                                        <button id="presentationMode" class="toolbarButton labeled" type="button"
+                                            title="Switch to Presentation Mode" tabindex="0"
+                                            data-l10n-id="pdfjs-presentation-mode-button">
+                                            <span data-l10n-id="pdfjs-presentation-mode-button-label">Presentation
+                                                Mode</span>
+                                        </button>
+
+                                        <a href="#page=1&amp;zoom=auto,-257,850" id="viewBookmark"
+                                            class="toolbarButton labeled"
+                                            title="Current Page (View URL from Current Page)" tabindex="0"
+                                            data-l10n-id="pdfjs-bookmark-button">
+                                            <span data-l10n-id="pdfjs-bookmark-button-label">Current Page</span>
+                                        </a>
+
+                                        <div id="viewBookmarkSeparator" class="horizontalToolbarSeparator"></div>
+
+                                        <button id="firstPage" class="toolbarButton labeled" type="button"
+                                            title="Go to First Page" tabindex="0" data-l10n-id="pdfjs-first-page-button"
+                                            disabled="">
+                                            <span data-l10n-id="pdfjs-first-page-button-label">Go to First Page</span>
+                                        </button>
+                                        <button id="lastPage" class="toolbarButton labeled" type="button"
+                                            title="Go to Last Page" tabindex="0" data-l10n-id="pdfjs-last-page-button"
+                                            disabled="">
+                                            <span data-l10n-id="pdfjs-last-page-button-label">Go to Last Page</span>
+                                        </button>
+
+                                        <div class="horizontalToolbarSeparator"></div>
+
+                                        <button id="pageRotateCw" class="toolbarButton labeled" type="button"
+                                            title="Rotate Clockwise" tabindex="0"
+                                            data-l10n-id="pdfjs-page-rotate-cw-button">
+                                            <span data-l10n-id="pdfjs-page-rotate-cw-button-label">Rotate
+                                                Clockwise</span>
+                                        </button>
+                                        <button id="pageRotateCcw" class="toolbarButton labeled" type="button"
+                                            title="Rotate Counterclockwise" tabindex="0"
+                                            data-l10n-id="pdfjs-page-rotate-ccw-button">
+                                            <span data-l10n-id="pdfjs-page-rotate-ccw-button-label">Rotate
+                                                Counterclockwise</span>
+                                        </button>
+
+                                        <div class="horizontalToolbarSeparator"></div>
+
+                                        <div id="cursorToolButtons" role="radiogroup">
+                                            <button id="cursorSelectTool" class="toolbarButton labeled toggled"
+                                                type="button" title="Enable Text Selection Tool" tabindex="0"
+                                                data-l10n-id="pdfjs-cursor-text-select-tool-button" role="radio"
+                                                aria-checked="true">
+                                                <span data-l10n-id="pdfjs-cursor-text-select-tool-button-label">Text
+                                                    Selection Tool</span>
+                                            </button>
+                                            <button id="cursorHandTool" class="toolbarButton labeled" type="button"
+                                                title="Enable Hand Tool" tabindex="0"
+                                                data-l10n-id="pdfjs-cursor-hand-tool-button" role="radio"
+                                                aria-checked="false">
+                                                <span data-l10n-id="pdfjs-cursor-hand-tool-button-label">Hand
+                                                    Tool</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="horizontalToolbarSeparator"></div>
+
+                                        <div id="scrollModeButtons" role="radiogroup">
+                                            <button id="scrollPage" class="toolbarButton labeled" type="button"
+                                                title="Use Page Scrolling" tabindex="0"
+                                                data-l10n-id="pdfjs-scroll-page-button" role="radio"
+                                                aria-checked="false">
+                                                <span data-l10n-id="pdfjs-scroll-page-button-label">Page
+                                                    Scrolling</span>
+                                            </button>
+                                            <button id="scrollVertical" class="toolbarButton labeled toggled"
+                                                type="button" title="Use Vertical Scrolling" tabindex="0"
+                                                data-l10n-id="pdfjs-scroll-vertical-button" role="radio"
+                                                aria-checked="true">
+                                                <span data-l10n-id="pdfjs-scroll-vertical-button-label">Vertical
+                                                    Scrolling</span>
+                                            </button>
+                                            <button id="scrollHorizontal" class="toolbarButton labeled" type="button"
+                                                title="Use Horizontal Scrolling" tabindex="0"
+                                                data-l10n-id="pdfjs-scroll-horizontal-button" role="radio"
+                                                aria-checked="false">
+                                                <span data-l10n-id="pdfjs-scroll-horizontal-button-label">Horizontal
+                                                    Scrolling</span>
+                                            </button>
+                                            <button id="scrollWrapped" class="toolbarButton labeled" type="button"
+                                                title="Use Wrapped Scrolling" tabindex="0"
+                                                data-l10n-id="pdfjs-scroll-wrapped-button" role="radio"
+                                                aria-checked="false">
+                                                <span data-l10n-id="pdfjs-scroll-wrapped-button-label">Wrapped
+                                                    Scrolling</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="horizontalToolbarSeparator"></div>
+
+                                        <div id="spreadModeButtons" role="radiogroup">
+                                            <button id="spreadNone" class="toolbarButton labeled toggled" type="button"
+                                                title="Do not join page spreads" tabindex="0"
+                                                data-l10n-id="pdfjs-spread-none-button" role="radio"
+                                                aria-checked="true">
+                                                <span data-l10n-id="pdfjs-spread-none-button-label">No Spreads</span>
+                                            </button>
+                                            <button id="spreadOdd" class="toolbarButton labeled" type="button"
+                                                title="Join page spreads starting with odd-numbered pages" tabindex="0"
+                                                data-l10n-id="pdfjs-spread-odd-button" role="radio"
+                                                aria-checked="false">
+                                                <span data-l10n-id="pdfjs-spread-odd-button-label">Odd Spreads</span>
+                                            </button>
+                                            <button id="spreadEven" class="toolbarButton labeled" type="button"
+                                                title="Join page spreads starting with even-numbered pages" tabindex="0"
+                                                data-l10n-id="pdfjs-spread-even-button" role="radio"
+                                                aria-checked="false">
+                                                <span data-l10n-id="pdfjs-spread-even-button-label">Even Spreads</span>
+                                            </button>
+                                        </div>
+
+                                        <div id="imageAltTextSettingsSeparator"
+                                            class="horizontalToolbarSeparator hidden"></div>
+                                        <button id="imageAltTextSettings" type="button"
+                                            class="toolbarButton labeled hidden" title="Image alt text settings"
+                                            tabindex="0" data-l10n-id="pdfjs-image-alt-text-settings-button"
+                                            aria-controls="altTextSettingsDialog">
+                                            <span data-l10n-id="pdfjs-image-alt-text-settings-button-label">Image alt
+                                                text settings</span>
+                                        </button>
+
+                                        <div class="horizontalToolbarSeparator"></div>
+
+                                        <button id="documentProperties" class="toolbarButton labeled" type="button"
+                                            title="Document Properties…" tabindex="0"
+                                            data-l10n-id="pdfjs-document-properties-button"
+                                            aria-controls="documentPropertiesDialog">
+                                            <span data-l10n-id="pdfjs-document-properties-button-label">Document
+                                                Properties…</span>
+                                        </button>
+                                    </div>
+                                </div> <!-- secondaryToolbar -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loadingBar" style="--progressBar-percent: 100%;" class="hidden">
+                        <div class="progress">
+                            <div class="glimmer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="viewerContainer" tabindex="0">
+                <div id="hiddenCopyElement"></div>
+                <div id="viewer" class="pdfViewer" style="--scale-factor: 1.6666666666666665;" lang="en">
+                    <div class="page" data-page-number="1" role="region" data-l10n-id="pdfjs-page-landmark"
+                        data-l10n-args="{&quot;page&quot;:1}"
+                        style="width: round(down, var(--scale-factor) * 595.5px, var(--scale-round-x, 1px)); height: round(down, var(--scale-factor) * 842.2499787px, var(--scale-round-y, 1px));"
+                        data-loaded="true" aria-label="Page 1">
+                        <div class="canvasWrapper"><canvas role="presentation" width="992" height="1403"><span
+                                    class="structTree"><span><span role="group"><span role="figure"
+                                                aria-owns="p7R_mc20"></span><span role="figure"
+                                                aria-owns="p7R_mc21"></span><span role="figure"
+                                                aria-owns="p7R_mc22"></span><span role="figure"
+                                                aria-owns="p7R_mc23"></span><span role="figure"
+                                                aria-owns="p7R_mc24"></span><span role="figure"
+                                                aria-owns="p7R_mc25"></span><span role="figure"><span role="heading"
+                                                    aria-level="5" aria-owns="p7R_mc10"></span><span
+                                                    aria-owns="p7R_mc26"></span></span><span role="figure"
+                                                aria-owns="p7R_mc27"></span><span role="figure"><span role="heading"
+                                                    aria-level="5" aria-owns="p7R_mc9"></span><span
+                                                    aria-owns="p7R_mc28"></span></span><span role="figure"
+                                                aria-owns="p7R_mc29"></span><span role="figure"><span role="heading"
+                                                    aria-level="5" aria-owns="p7R_mc8"></span><span
+                                                    aria-owns="p7R_mc30"></span></span><span role="figure"
+                                                aria-owns="p7R_mc31"></span><span role="figure"
+                                                aria-owns="p7R_mc32"></span><span role="figure"><span role="heading"
+                                                    aria-level="5" aria-owns="p7R_mc1"></span><span
+                                                    aria-owns="p7R_mc33"></span></span><span role="figure"
+                                                aria-owns="p7R_mc34"></span><span role="figure"><span role="heading"
+                                                    aria-level="5" aria-owns="p7R_mc0"></span><span
+                                                    aria-owns="p7R_mc35"></span></span><span role="figure"
+                                                aria-owns="p7R_mc36"></span><span role="figure"><span role="figure"
+                                                    aria-owns="p7R_mc18"></span><span
+                                                    aria-owns="p7R_mc37"></span></span></span></span></span></canvas>
+                        </div>
+                        <div tabindex="0" class="textLayer"
+                            style="width: round(down, var(--scale-factor) * 595.5px, var(--scale-round-x, 1px)); height: round(down, var(--scale-factor) * 842.2499787px, var(--scale-round-y, 1px));"
+                            data-main-rotation="0"><span class="markedContent" id="p7R_mc0"><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*350.90px); top: calc(var(--scale-factor)*644.83px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.945137);"
+                                        role="presentation" dir="ltr">Anytime - Before, during, or</span></span><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*329.33px); top: calc(var(--scale-factor)*659.08px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.940038);"
+                                        role="presentation" dir="ltr">after the Standard Batch Start
+                                        Date</span></span></span><span class="markedContent" id="p7R_mc1"><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*100.25px); top: calc(var(--scale-factor)*644.77px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.922236);"
+                                        role="presentation" dir="ltr">Up to €150K at a €1.5M</span></span><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*90.08px); top: calc(var(--scale-factor)*659.02px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.970198);"
+                                        role="presentation" dir="ltr">post-money valuation cap</span></span></span><span
+                                class="markedContent"></span><span class="markedContent" id="p7R_mc2"><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*149.57px); top: calc(var(--scale-factor)*607.66px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif; transform: scaleX(0.986811);"
+                                        role="presentation" dir="ltr">Funding</span></span></span><span
+                                class="markedContent"></span><span class="markedContent" id="p7R_mc3"><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*204.81px); top: calc(var(--scale-factor)*607.66px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*380.24px); top: calc(var(--scale-factor)*607.44px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif; transform: scaleX(0.946313);"
+                                        role="presentation" dir="ltr">Investment Timing</span></span></span><span
+                                class="markedContent" id="p7R_mc4"><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*94.44px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">T</span><span
+                                        style="left: calc(var(--scale-factor)*102.64px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.949907);"
+                                        role="presentation" dir="ltr">he</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*121.67px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*124.40px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.998225);"
+                                        role="presentation" dir="ltr">Traction Fellowship</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*275.95px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*278.67px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.949907);"
+                                        role="presentation" dir="ltr">he</span><span
+                                        style="left: calc(var(--scale-factor)*297.70px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.978337);"
+                                        role="presentation" dir="ltr">lps</span><span
+                                        style="left: calc(var(--scale-factor)*320.21px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*322.93px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*329.15px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span><span
+                                        style="left: calc(var(--scale-factor)*338.31px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">l</span><span
+                                        style="left: calc(var(--scale-factor)*341.98px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">e</span><span
+                                        style="left: calc(var(--scale-factor)*351.83px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.948945);"
+                                        role="presentation" dir="ltr">nts</span><span
+                                        style="left: calc(var(--scale-factor)*375.39px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*378.10px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.902474);"
+                                        role="presentation" dir="ltr">tr</span><span
+                                        style="left: calc(var(--scale-factor)*389.73px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span><span
+                                        style="left: calc(var(--scale-factor)*398.90px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.93563);"
+                                        role="presentation" dir="ltr">ns</span><span
+                                        style="left: calc(var(--scale-factor)*416.23px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*419.90px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*426.12px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*429.78px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.984321);"
+                                        role="presentation" dir="ltr">on</span><span
+                                        style="left: calc(var(--scale-factor)*449.46px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*452.18px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">f</span><span
+                                        style="left: calc(var(--scale-factor)*458.47px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.960897);"
+                                        role="presentation" dir="ltr">rom</span><span
+                                        style="left: calc(var(--scale-factor)*488.94px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*491.65px); top: calc(var(--scale-factor)*151.48px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span></span><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*73.33px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">v</span><span
+                                        style="left: calc(var(--scale-factor)*81.61px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span><span
+                                        style="left: calc(var(--scale-factor)*90.78px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">l</span><span
+                                        style="left: calc(var(--scale-factor)*94.44px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.960444);"
+                                        role="presentation" dir="ltr">ida</span><span
+                                        style="left: calc(var(--scale-factor)*117.96px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*124.18px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(1.02405);"
+                                        role="presentation" dir="ltr">ed</span><span
+                                        style="left: calc(var(--scale-factor)*144.72px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*147.44px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.971284);"
+                                        role="presentation" dir="ltr">idea</span><span
+                                        style="left: calc(var(--scale-factor)*180.81px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*183.53px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">w</span><span
+                                        style="left: calc(var(--scale-factor)*196.30px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*199.97px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*206.18px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">h</span><span
+                                        style="left: calc(var(--scale-factor)*215.36px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*218.08px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*221.75px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*230.93px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*234.60px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*240.82px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.897637);"
+                                        role="presentation" dir="ltr">ia</span><span
+                                        style="left: calc(var(--scale-factor)*253.65px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">l</span><span
+                                        style="left: calc(var(--scale-factor)*257.32px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*260.04px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.902475);"
+                                        role="presentation" dir="ltr">tr</span><span
+                                        style="left: calc(var(--scale-factor)*271.67px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(1.00641);"
+                                        role="presentation" dir="ltr">ac</span><span
+                                        style="left: calc(var(--scale-factor)*290.44px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*296.66px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*300.33px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.984321);"
+                                        role="presentation" dir="ltr">on</span><span
+                                        style="left: calc(var(--scale-factor)*320.00px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*322.72px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(1.03747);"
+                                        role="presentation" dir="ltr">to</span><span
+                                        style="left: calc(var(--scale-factor)*339.44px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*342.16px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">s</span><span
+                                        style="left: calc(var(--scale-factor)*350.31px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(1.04166);"
+                                        role="presentation" dir="ltr">ec</span><span
+                                        style="left: calc(var(--scale-factor)*369.77px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.870394);"
+                                        role="presentation" dir="ltr">ur</span><span
+                                        style="left: calc(var(--scale-factor)*384.37px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*388.04px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*397.21px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">g</span><span
+                                        style="left: calc(var(--scale-factor)*407.82px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*410.54px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*419.71px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*422.43px); top: calc(var(--scale-factor)*173.23px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.992443);"
+                                        role="presentation" dir="ltr">multi-million</span></span><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*218.09px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.976877);"
+                                        role="presentation" dir="ltr">Euros</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*261.80px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*264.53px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.987784);"
+                                        role="presentation" dir="ltr">funding</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*324.79px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*327.64px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif; transform: scaleX(0.941237);"
+                                        role="presentation" dir="ltr">roun</span><span
+                                        style="left: calc(var(--scale-factor)*361.90px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">d</span><span
+                                        style="left: calc(var(--scale-factor)*372.59px); top: calc(var(--scale-factor)*194.98px); font-size: calc(var(--scale-factor)*16.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">.</span></span></span><span
+                                class="markedContent"></span><span class="markedContent" id="p7R_mc5"><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*100.36px); top: calc(var(--scale-factor)*483.26px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif; transform: scaleX(1.00879);"
+                                        role="presentation" dir="ltr">Location</span></span></span><span
+                                class="markedContent"></span><span class="markedContent" id="p7R_mc6"><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*160.53px); top: calc(var(--scale-factor)*483.26px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*274.58px); top: calc(var(--scale-factor)*483.26px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif; transform: scaleX(0.960318);"
+                                        role="presentation" dir="ltr">Duration</span></span></span><span
+                                class="markedContent"></span><span class="markedContent" id="p7R_mc7"><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*333.41px); top: calc(var(--scale-factor)*483.26px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*468.52px); top: calc(var(--scale-factor)*483.25px); font-size: calc(var(--scale-factor)*14.03px); font-family: sans-serif; transform: scaleX(1.05174);"
+                                        role="presentation" dir="ltr">Cost</span></span></span><span
+                                class="markedContent" id="p7R_mc8"><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*460.68px); top: calc(var(--scale-factor)*527.86px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(1.01854);"
+                                        role="presentation" dir="ltr">Free</span></span></span><span
+                                class="markedContent" id="p7R_mc9"><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*261.87px); top: calc(var(--scale-factor)*527.86px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.938092);"
+                                        role="presentation" dir="ltr">3-18 months</span></span></span><span
+                                class="markedContent" id="p7R_mc10"><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*58.68px); top: calc(var(--scale-factor)*527.88px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.944249);"
+                                        role="presentation" dir="ltr">Online from anywhere</span></span></span><span
+                                class="markedContent" id="p7R_mc11"><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*65.41px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">P</span><span
+                                        style="left: calc(var(--scale-factor)*73.12px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*75.87px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*80.53px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.990571);"
+                                        role="presentation" dir="ltr">ch</span><span
+                                        style="left: calc(var(--scale-factor)*94.60px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*96.64px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*99.39px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*106.27px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*108.31px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">f</span><span
+                                        style="left: calc(var(--scale-factor)*113.02px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.96375);"
+                                        role="presentation" dir="ltr">ront</span><span
+                                        style="left: calc(var(--scale-factor)*136.47px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*138.51px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">o</span><span
+                                        style="left: calc(var(--scale-factor)*146.37px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">f</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*151.09px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*153.13px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.958752);"
+                                        role="presentation" dir="ltr">hundreds of angels and tier-1
+                                        VCs</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*348.23px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*350.28px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span><span
+                                        style="left: calc(var(--scale-factor)*357.14px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*364.02px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">d</span><span
+                                        style="left: calc(var(--scale-factor)*372.02px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*374.06px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">r</span><span
+                                        style="left: calc(var(--scale-factor)*378.12px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(1.0256);"
+                                        role="presentation" dir="ltr">ed</span><span
+                                        style="left: calc(var(--scale-factor)*393.50px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">u</span><span
+                                        style="left: calc(var(--scale-factor)*400.38px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(1.04292);"
+                                        role="presentation" dir="ltr">ce</span><span
+                                        style="left: calc(var(--scale-factor)*414.96px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*417.00px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">f</span><span
+                                        style="left: calc(var(--scale-factor)*421.72px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.903549);"
+                                        role="presentation" dir="ltr">un</span><span
+                                        style="left: calc(var(--scale-factor)*435.47px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">d</span><span
+                                        style="left: calc(var(--scale-factor)*443.47px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">r</span><span
+                                        style="left: calc(var(--scale-factor)*447.53px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.900002);"
+                                        role="presentation" dir="ltr">ai</span><span
+                                        style="left: calc(var(--scale-factor)*457.14px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">s</span><span
+                                        style="left: calc(var(--scale-factor)*463.25px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*466.00px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*472.87px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">g</span><span
+                                        style="left: calc(var(--scale-factor)*480.82px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*482.86px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*487.51px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*490.26px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">m</span><span
+                                        style="left: calc(var(--scale-factor)*501.16px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">e</span><span
+                                        style="left: calc(var(--scale-factor)*508.54px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*510.58px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">b</span><span
+                                        style="left: calc(var(--scale-factor)*518.58px); top: calc(var(--scale-factor)*283.97px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">y</span></span><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*65.41px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.952089);"
+                                        role="presentation" dir="ltr">mor</span><span
+                                        style="left: calc(var(--scale-factor)*88.22px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">e</span><span
+                                        style="left: calc(var(--scale-factor)*95.60px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*97.64px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*102.30px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.91845);"
+                                        role="presentation" dir="ltr">ha</span><span
+                                        style="left: calc(var(--scale-factor)*116.04px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*122.91px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*124.95px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(1.06946);"
+                                        role="presentation" dir="ltr">80</span><span
+                                        style="left: calc(var(--scale-factor)*141.27px); top: calc(var(--scale-factor)*298.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">%</span></span></span><span class="markedContent"
+                                id="p7R_mc12"><span class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*65.41px); top: calc(var(--scale-factor)*326.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.916393);"
+                                        role="presentation" dir="ltr">Free cloud credits, tickets to</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*220.39px); top: calc(var(--scale-factor)*326.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*221.87px); top: calc(var(--scale-factor)*326.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.937934);"
+                                        role="presentation" dir="ltr">Europe’s leading conferences</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*387.73px); top: calc(var(--scale-factor)*326.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.892092);"
+                                        role="presentation" dir="ltr">, templates, and more</span></span></span><span
+                                class="markedContent" id="p7R_mc13"><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*65.41px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.934662);"
+                                        role="presentation" dir="ltr">Strategise</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*122.68px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*124.16px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.925689);"
+                                        role="presentation" dir="ltr">with</span></span><span
+                                    class="markedContent"></span><span class="markedContent"></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*147.73px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*151.06px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.92084);"
+                                        role="presentation" dir="ltr">mentors and</span></span><span
+                                    class="markedContent"></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*221.32px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*224.70px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.958467);"
+                                        role="presentation" dir="ltr">subject-matter experts</span></span></span><span
+                                class="markedContent" id="p7R_mc14"><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*356.56px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*358.04px); top: calc(var(--scale-factor)*355.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.899137);"
+                                        role="presentation" dir="ltr">on your own schedule</span></span><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*65.41px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">C</span><span
+                                        style="left: calc(var(--scale-factor)*74.48px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.931384);"
+                                        role="presentation" dir="ltr">onn</span><span
+                                        style="left: calc(var(--scale-factor)*95.19px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(1.02146);"
+                                        role="presentation" dir="ltr">ec</span><span
+                                        style="left: calc(var(--scale-factor)*109.17px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*113.83px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*115.27px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">w</span><span
+                                        style="left: calc(var(--scale-factor)*124.53px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*126.98px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*131.34px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">h</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*138.21px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*139.66px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.924267);"
+                                        role="presentation" dir="ltr">unicorn founders, investors and EWOR
+                                        Fellows</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*397.57px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*399.03px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*401.48px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*408.35px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*409.79px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*414.15px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.931021);"
+                                        role="presentation" dir="ltr">he</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*428.11px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*429.56px); top: calc(var(--scale-factor)*383.72px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.947643);"
+                                        role="presentation" dir="ltr">EWOR House</span></span><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*65.41px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">J</span><span
+                                        style="left: calc(var(--scale-factor)*69.70px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">o</span><span
+                                        style="left: calc(var(--scale-factor)*77.26px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*79.71px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">n</span><span
+                                        style="left: calc(var(--scale-factor)*86.59px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*88.03px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">a</span><span
+                                        style="left: calc(var(--scale-factor)*94.89px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*96.33px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">c</span><span
+                                        style="left: calc(var(--scale-factor)*103.23px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.918678);"
+                                        role="presentation" dir="ltr">ommun</span><span
+                                        style="left: calc(var(--scale-factor)*145.14px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">i</span><span
+                                        style="left: calc(var(--scale-factor)*147.58px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">t</span><span
+                                        style="left: calc(var(--scale-factor)*151.94px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">y</span><span
+                                        style="left: calc(var(--scale-factor)*158.37px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*159.81px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">o</span><span
+                                        style="left: calc(var(--scale-factor)*167.37px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">f</span></span><span class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*172.09px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*173.54px); top: calc(var(--scale-factor)*412.22px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(0.921193);"
+                                        role="presentation" dir="ltr">0.1% outlier founders</span></span></span><span
+                                class="markedContent" id="p7R_mc15"><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*186.17px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif; transform: scaleX(0.986521);"
+                                        role="presentation" dir="ltr">Options only</span></span><span
+                                    class="markedContent"><span
+                                        style="left: calc(var(--scale-factor)*273.70px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*276.20px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">—</span><span class="markedContent"></span><span
+                                        style="left: calc(var(--scale-factor)*288.81px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*293.58px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif; transform: scaleX(0.981251);"
+                                        role="presentation" dir="ltr">no</span><span
+                                        style="left: calc(var(--scale-factor)*310.82px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*313.21px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">r</span><span
+                                        style="left: calc(var(--scale-factor)*317.95px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif; transform: scaleX(0.974686);"
+                                        role="presentation" dir="ltr">igid</span><span
+                                        style="left: calc(var(--scale-factor)*343.04px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr"> </span><span
+                                        style="left: calc(var(--scale-factor)*345.43px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif; transform: scaleX(0.919013);"
+                                        role="presentation" dir="ltr">stru</span><span
+                                        style="left: calc(var(--scale-factor)*370.81px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">c</span><span
+                                        style="left: calc(var(--scale-factor)*379.23px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif; transform: scaleX(0.899706);"
+                                        role="presentation" dir="ltr">tur</span><span
+                                        style="left: calc(var(--scale-factor)*397.47px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">e</span><span
+                                        style="left: calc(var(--scale-factor)*406.10px); top: calc(var(--scale-factor)*247.85px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif;"
+                                        role="presentation" dir="ltr">s</span></span></span><span
+                                class="markedContent"></span><span class="markedContent" id="p7R_mc16"><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*188.50px); top: calc(var(--scale-factor)*50.00px); font-size: calc(var(--scale-factor)*24.00px); font-family: sans-serif; transform: scaleX(0.961989);"
+                                        role="presentation" dir="ltr">Traction Fellowship</span></span><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*267.87px); top: calc(var(--scale-factor)*76.58px); font-size: calc(var(--scale-factor)*12.00px); font-family: sans-serif; transform: scaleX(1.02392);"
+                                        role="presentation" dir="ltr">Factsheet</span></span></span><span
+                                class="markedContent" id="p7R_mc17"><span class="markedContent"><br
+                                        role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*240.63px); top: calc(var(--scale-factor)*801.25px); font-size: calc(var(--scale-factor)*14.04px); font-family: sans-serif; transform: scaleX(0.982553);"
+                                        dir="ltr" aria-owns="pdfjs_internal_id_19R">Traction
+                                        Agreement</span></span></span><span class="markedContent"
+                                id="p7R_mc18"></span><span class="markedContent" id="p7R_mc19"><span
+                                    class="markedContent"><br role="presentation"><span
+                                        style="left: calc(var(--scale-factor)*164.56px); top: calc(var(--scale-factor)*774.84px); font-size: calc(var(--scale-factor)*12.75px); font-family: sans-serif; transform: scaleX(0.942845);"
+                                        role="presentation" dir="ltr">Apply to EWOR to gain an unfair
+                                        advantage.</span></span></span><span class="markedContent"
+                                id="p7R_mc20"></span><span class="markedContent" id="p7R_mc21"></span><span
+                                class="markedContent" id="p7R_mc22"></span><span class="markedContent"
+                                id="p7R_mc23"></span><span class="markedContent" id="p7R_mc24"></span><span
+                                class="markedContent" id="p7R_mc25"></span><span class="markedContent"
+                                id="p7R_mc26"></span><span class="markedContent" id="p7R_mc27"></span><span
+                                class="markedContent" id="p7R_mc28"></span><span class="markedContent"
+                                id="p7R_mc29"></span><span class="markedContent" id="p7R_mc30"></span><span
+                                class="markedContent" id="p7R_mc31"></span><span class="markedContent"
+                                id="p7R_mc32"></span><span class="markedContent" id="p7R_mc33"></span><span
+                                class="markedContent" id="p7R_mc34"></span><span class="markedContent"
+                                id="p7R_mc35"></span><span class="markedContent" id="p7R_mc36"></span><span
+                                class="markedContent" id="p7R_mc37"></span>
+                            <div class="endOfContent"></div>
+                        </div>
+                        <div class="annotationLayer"
+                            style="width: round(down, var(--scale-factor) * 595.5px, var(--scale-round-x, 1px)); height: round(down, var(--scale-factor) * 842.2499787px, var(--scale-round-y, 1px));"
+                            data-main-rotation="0">
+                            <section data-annotation-id="19R" tabindex="1000"
+                                style="z-index: 0; left: 40.3899%; top: 94.8263%; width: 22.9219%; height: 2.04809%;"
+                                class="linkAnnotation"><a data-element-id="19R"
+                                    title="https://downloads.ewor.com/decks/2024-07-01_Traction_Fellowship_Agreement_guaranteed_investment_2024.pdf"
+                                    href="https://downloads.ewor.com/decks/2024-07-01_Traction_Fellowship_Agreement_guaranteed_investment_2024.pdf"
+                                    target="" rel="noopener noreferrer nofollow" id="pdfjs_internal_id_19R"></a>
+                            </section>
+                        </div>
+                        <div class="annotationEditorLayer disabled" hidden="" dir="ltr" tabindex="0"
+                            style="width: round(down, var(--scale-factor) * 595.5px, var(--scale-round-x, 1px)); height: round(down, var(--scale-factor) * 842.2499787px, var(--scale-round-y, 1px));"
+                            data-main-rotation="0"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- mainContainer -->
+
+        <div id="dialogContainer">
+            <dialog id="passwordDialog">
+                <div class="row">
+                    <label for="password" id="passwordText" data-l10n-id="pdfjs-password-label">Enter the password to
+                        open this PDF file.</label>
+                </div>
+                <div class="row">
+                    <input type="password" id="password" class="toolbarField">
+                </div>
+                <div class="buttonRow">
+                    <button id="passwordCancel" class="dialogButton" type="button"><span
+                            data-l10n-id="pdfjs-password-cancel-button">Cancel</span></button>
+                    <button id="passwordSubmit" class="dialogButton" type="button"><span
+                            data-l10n-id="pdfjs-password-ok-button">OK</span></button>
+                </div>
+            </dialog>
+            <dialog id="documentPropertiesDialog">
+                <div class="row">
+                    <span id="fileNameLabel" data-l10n-id="pdfjs-document-properties-file-name">File name:</span>
+                    <p id="fileNameField" aria-labelledby="fileNameLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="fileSizeLabel" data-l10n-id="pdfjs-document-properties-file-size">File size:</span>
+                    <p id="fileSizeField" aria-labelledby="fileSizeLabel">-</p>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
+                    <span id="titleLabel" data-l10n-id="pdfjs-document-properties-title">Title:</span>
+                    <p id="titleField" aria-labelledby="titleLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="authorLabel" data-l10n-id="pdfjs-document-properties-author">Author:</span>
+                    <p id="authorField" aria-labelledby="authorLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="subjectLabel" data-l10n-id="pdfjs-document-properties-subject">Subject:</span>
+                    <p id="subjectField" aria-labelledby="subjectLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="keywordsLabel" data-l10n-id="pdfjs-document-properties-keywords">Keywords:</span>
+                    <p id="keywordsField" aria-labelledby="keywordsLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="creationDateLabel" data-l10n-id="pdfjs-document-properties-creation-date">Creation
+                        Date:</span>
+                    <p id="creationDateField" aria-labelledby="creationDateLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="modificationDateLabel"
+                        data-l10n-id="pdfjs-document-properties-modification-date">Modification Date:</span>
+                    <p id="modificationDateField" aria-labelledby="modificationDateLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="creatorLabel" data-l10n-id="pdfjs-document-properties-creator">Creator:</span>
+                    <p id="creatorField" aria-labelledby="creatorLabel">-</p>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
+                    <span id="producerLabel" data-l10n-id="pdfjs-document-properties-producer">PDF Producer:</span>
+                    <p id="producerField" aria-labelledby="producerLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="versionLabel" data-l10n-id="pdfjs-document-properties-version">PDF Version:</span>
+                    <p id="versionField" aria-labelledby="versionLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="pageCountLabel" data-l10n-id="pdfjs-document-properties-page-count">Page Count:</span>
+                    <p id="pageCountField" aria-labelledby="pageCountLabel">-</p>
+                </div>
+                <div class="row">
+                    <span id="pageSizeLabel" data-l10n-id="pdfjs-document-properties-page-size">Page Size:</span>
+                    <p id="pageSizeField" aria-labelledby="pageSizeLabel">-</p>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
+                    <span id="linearizedLabel" data-l10n-id="pdfjs-document-properties-linearized">Fast Web View:</span>
+                    <p id="linearizedField" aria-labelledby="linearizedLabel">-</p>
+                </div>
+                <div class="buttonRow">
+                    <button id="documentPropertiesClose" class="dialogButton" type="button"><span
+                            data-l10n-id="pdfjs-document-properties-close-button">Close</span></button>
+                </div>
+            </dialog>
+            <dialog class="dialog altText" id="altTextDialog" aria-labelledby="dialogLabel"
+                aria-describedby="dialogDescription">
+                <div id="altTextContainer" class="mainContainer">
+                    <div id="overallDescription">
+                        <span id="dialogLabel" data-l10n-id="pdfjs-editor-alt-text-dialog-label" class="title">Choose an
+                            option</span>
+                        <span id="dialogDescription" data-l10n-id="pdfjs-editor-alt-text-dialog-description">Alt text
+                            (alternative text) helps when people can’t see the image or when it doesn’t load.</span>
+                    </div>
+                    <div id="addDescription">
+                        <div class="radio">
+                            <div class="radioButton">
+                                <input type="radio" id="descriptionButton" name="altTextOption" tabindex="0"
+                                    aria-describedby="descriptionAreaLabel" checked="">
+                                <label for="descriptionButton"
+                                    data-l10n-id="pdfjs-editor-alt-text-add-description-label">Add a description</label>
+                            </div>
+                            <div class="radioLabel">
+                                <span id="descriptionAreaLabel"
+                                    data-l10n-id="pdfjs-editor-alt-text-add-description-description">Aim for 1-2
+                                    sentences that describe the subject, setting, or actions.</span>
+                            </div>
+                        </div>
+                        <div class="descriptionArea">
+                            <textarea id="descriptionTextarea"
+                                placeholder="For example, “A young man sits down at a table to eat a meal”"
+                                aria-labelledby="descriptionAreaLabel" data-l10n-id="pdfjs-editor-alt-text-textarea"
+                                tabindex="0"></textarea>
+                        </div>
+                    </div>
+                    <div id="markAsDecorative">
+                        <div class="radio">
+                            <div class="radioButton">
+                                <input type="radio" id="decorativeButton" name="altTextOption"
+                                    aria-describedby="decorativeLabel">
+                                <label for="decorativeButton"
+                                    data-l10n-id="pdfjs-editor-alt-text-mark-decorative-label">Mark as
+                                    decorative</label>
+                            </div>
+                            <div class="radioLabel">
+                                <span id="decorativeLabel"
+                                    data-l10n-id="pdfjs-editor-alt-text-mark-decorative-description">This is used for
+                                    ornamental images, like borders or watermarks.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buttons">
+                        <button id="altTextCancel" class="secondaryButton" type="button" tabindex="0"><span
+                                data-l10n-id="pdfjs-editor-alt-text-cancel-button">Cancel</span></button>
+                        <button id="altTextSave" class="primaryButton" type="button" tabindex="0"><span
+                                data-l10n-id="pdfjs-editor-alt-text-save-button">Save</span></button>
+                    </div>
+                </div>
+            </dialog>
+            <dialog class="dialog newAltText" id="newAltTextDialog" aria-labelledby="newAltTextTitle"
+                aria-describedby="newAltTextDescription" tabindex="0">
+                <div id="newAltTextContainer" class="mainContainer">
+                    <div class="title">
+                        <span id="newAltTextTitle" data-l10n-id="pdfjs-editor-new-alt-text-dialog-edit-label"
+                            role="sectionhead" tabindex="0">Edit alt text (image description)</span>
+                    </div>
+                    <div id="mainContent">
+                        <div id="descriptionAndSettings">
+                            <div id="descriptionInstruction">
+                                <div id="newAltTextDescriptionContainer">
+                                    <div class="altTextSpinner" role="status" aria-live="polite"></div>
+                                    <textarea id="newAltTextDescriptionTextarea"
+                                        placeholder="Write your description here…"
+                                        aria-labelledby="descriptionAreaLabel"
+                                        data-l10n-id="pdfjs-editor-new-alt-text-textarea" tabindex="0"></textarea>
+                                </div>
+                                <span id="newAltTextDescription" role="note"
+                                    data-l10n-id="pdfjs-editor-new-alt-text-description">Short description for people
+                                    who can’t see the image or when the image doesn’t load.</span>
+                                <div id="newAltTextDisclaimer" role="note">
+                                    <div><span data-l10n-id="pdfjs-editor-new-alt-text-disclaimer1">This alt text was
+                                            created automatically and may be inaccurate.</span> <a
+                                            href="https://support.mozilla.org/en-US/kb/pdf-alt-text" target="_blank"
+                                            rel="noopener noreferrer" id="newAltTextLearnMore"
+                                            data-l10n-id="pdfjs-editor-new-alt-text-disclaimer-learn-more-url"
+                                            tabindex="0">Learn more</a></div>
+                                </div>
+                            </div>
+                            <div id="newAltTextCreateAutomatically" class="toggler">
+                                <button id="newAltTextCreateAutomaticallyButton" class="toggle-button" type="button"
+                                    aria-pressed="true" tabindex="0"></button>
+                                <label for="newAltTextCreateAutomaticallyButton" class="togglerLabel"
+                                    data-l10n-id="pdfjs-editor-new-alt-text-create-automatically-button-label">Create
+                                    alt text automatically</label>
+                            </div>
+                            <div id="newAltTextDownloadModel" class="hidden">
+                                <span id="newAltTextDownloadModelDescription"
+                                    data-l10n-id="pdfjs-editor-new-alt-text-ai-model-downloading-progress"
+                                    aria-valuemin="0"
+                                    data-l10n-args="{ &quot;totalSize&quot;: 0, &quot;downloadedSize&quot;: 0 }">Downloading
+                                    alt text AI model (0 of 0 MB)</span>
+                            </div>
+                        </div>
+                        <div id="newAltTextImagePreview"></div>
+                    </div>
+                    <div id="newAltTextError" class="messageBar">
+                        <div>
+                            <div>
+                                <span class="title" data-l10n-id="pdfjs-editor-new-alt-text-error-title">Couldn’t create
+                                    alt text automatically</span>
+                                <span class="description"
+                                    data-l10n-id="pdfjs-editor-new-alt-text-error-description">Please write your own alt
+                                    text or try again later.</span>
+                            </div>
+                            <button id="newAltTextCloseButton" class="closeButton" type="button" tabindex="0"
+                                title="Close"><span
+                                    data-l10n-id="pdfjs-editor-new-alt-text-error-close-button">Close</span></button>
+                        </div>
+                    </div>
+                    <div id="newAltTextButtons" class="dialogButtonsGroup">
+                        <button id="newAltTextCancel" type="button" class="secondaryButton hidden" tabindex="0"><span
+                                data-l10n-id="pdfjs-editor-alt-text-cancel-button">Cancel</span></button>
+                        <button id="newAltTextNotNow" type="button" class="secondaryButton" tabindex="0"><span
+                                data-l10n-id="pdfjs-editor-new-alt-text-not-now-button">Not now</span></button>
+                        <button id="newAltTextSave" type="button" class="primaryButton" tabindex="0"><span
+                                data-l10n-id="pdfjs-editor-alt-text-save-button">Save</span></button>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog class="dialog" id="altTextSettingsDialog" aria-labelledby="altTextSettingsTitle">
+                <div id="altTextSettingsContainer" class="mainContainer">
+                    <div class="title">
+                        <span id="altTextSettingsTitle" data-l10n-id="pdfjs-editor-alt-text-settings-dialog-label"
+                            role="sectionhead" tabindex="0" class="title">Image alt text settings</span>
+                    </div>
+                    <div id="automaticAltText">
+                        <span data-l10n-id="pdfjs-editor-alt-text-settings-automatic-title">Automatic alt text</span>
+                        <div id="automaticSettings">
+                            <div id="createModelSetting">
+                                <div class="toggler">
+                                    <button id="createModelButton" type="button" class="toggle-button"
+                                        aria-pressed="true" tabindex="0"></button>
+                                    <label for="createModelButton" class="togglerLabel"
+                                        data-l10n-id="pdfjs-editor-alt-text-settings-create-model-button-label">Create
+                                        alt text automatically</label>
+                                </div>
+                                <div id="createModelDescription" class="description">
+                                    <span
+                                        data-l10n-id="pdfjs-editor-alt-text-settings-create-model-description">Suggests
+                                        descriptions to help people who can’t see the image or when the image doesn’t
+                                        load.</span> <a href="https://support.mozilla.org/en-US/kb/pdf-alt-text"
+                                        target="_blank" rel="noopener noreferrer" id="altTextSettingsLearnMore"
+                                        data-l10n-id="pdfjs-editor-new-alt-text-disclaimer-learn-more-url"
+                                        tabindex="0">Learn more</a>
+                                </div>
+                            </div>
+                            <div id="aiModelSettings">
+                                <div>
+                                    <span data-l10n-id="pdfjs-editor-alt-text-settings-download-model-label"
+                                        data-l10n-args="{ &quot;totalSize&quot;: 180 }">Alt text AI model (180
+                                        MB)</span>
+                                    <div id="aiModelDescription" class="description">
+                                        <span data-l10n-id="pdfjs-editor-alt-text-settings-ai-model-description">Runs
+                                            locally on your device so your data stays private. Required for automatic
+                                            alt text.</span>
+                                    </div>
+                                </div>
+                                <button id="deleteModelButton" type="button" class="secondaryButton" tabindex="0"><span
+                                        data-l10n-id="pdfjs-editor-alt-text-settings-delete-model-button">Delete</span></button>
+                                <button id="downloadModelButton" type="button" class="secondaryButton"
+                                    tabindex="0"><span
+                                        data-l10n-id="pdfjs-editor-alt-text-settings-download-model-button">Download</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialogSeparator"></div>
+                    <div id="altTextEditor">
+                        <span data-l10n-id="pdfjs-editor-alt-text-settings-editor-title">Alt text editor</span>
+                        <div id="showAltTextEditor">
+                            <div class="toggler">
+                                <button id="showAltTextDialogButton" type="button" class="toggle-button"
+                                    aria-pressed="true" tabindex="0"></button>
+                                <label for="showAltTextDialogButton" class="togglerLabel"
+                                    data-l10n-id="pdfjs-editor-alt-text-settings-show-dialog-button-label">Show alt text
+                                    editor right away when adding an image</label>
+                            </div>
+                            <div id="showAltTextDialogDescription" class="description">
+                                <span data-l10n-id="pdfjs-editor-alt-text-settings-show-dialog-description">Helps you
+                                    make sure all your images have alt text.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buttons" class="dialogButtonsGroup">
+                        <button id="altTextSettingsCloseButton" type="button" class="primaryButton" tabindex="0"><span
+                                data-l10n-id="pdfjs-editor-alt-text-settings-close-button">Close</span></button>
+                    </div>
+                </div>
+            </dialog>
+        </div> <!-- dialogContainer -->
+
+    </div> <!-- outerContainer -->
+    <div id="printContainer"></div>
+
+
+</body>
+
+</html>
